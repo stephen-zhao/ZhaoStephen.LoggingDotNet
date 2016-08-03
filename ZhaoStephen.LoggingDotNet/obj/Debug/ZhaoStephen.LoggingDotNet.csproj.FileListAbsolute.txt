@@ -1,0 +1,5 @@
+D:\projects\ZhaoStephen.LoggingDotNet\ZhaoStephen.LoggingDotNet\obj\Debug\ZhaoStephen.LoggingDotNet.csprojResolveAssemblyReference.cache
+D:\projects\ZhaoStephen.LoggingDotNet\ZhaoStephen.LoggingDotNet\bin\Debug\ZhaoStephen.LoggingDotNet.dll
+D:\projects\ZhaoStephen.LoggingDotNet\ZhaoStephen.LoggingDotNet\bin\Debug\ZhaoStephen.LoggingDotNet.pdb
+D:\projects\ZhaoStephen.LoggingDotNet\ZhaoStephen.LoggingDotNet\obj\Debug\ZhaoStephen.LoggingDotNet.dll
+D:\projects\ZhaoStephen.LoggingDotNet\ZhaoStephen.LoggingDotNet\obj\Debug\ZhaoStephen.LoggingDotNet.pdb
