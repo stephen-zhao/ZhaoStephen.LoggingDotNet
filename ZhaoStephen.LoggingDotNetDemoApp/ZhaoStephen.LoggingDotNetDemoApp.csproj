@@ -44,6 +44,10 @@
     <Reference Include="System.Net.Http" />
     <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml" />
+    <Reference Include="ZhaoStephen.LoggingDotNet, Version=0.0.1.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\ZhaoStephen.LoggingDotNet\bin\Debug\ZhaoStephen.LoggingDotNet.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="LoggingDemoAppForm.cs">
@@ -78,12 +82,6 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\ZhaoStephen.LoggingDotNet\ZhaoStephen.LoggingDotNet.csproj">
-      <Project>{d8bd213c-ff0e-4a31-8395-10c9235c38fc}</Project>
-      <Name>ZhaoStephen.LoggingDotNet</Name>
-    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

@@ -1,0 +1,11 @@
+D:\projects\ZhaoStephen.LoggingDotNet\ZhaoStephen.LoggingDotNetDemoApp\bin\Release\ZhaoStephen.LoggingDotNetDemoApp.exe.config
+D:\projects\ZhaoStephen.LoggingDotNet\ZhaoStephen.LoggingDotNetDemoApp\bin\Release\ZhaoStephen.LoggingDotNetDemoApp.exe
+D:\projects\ZhaoStephen.LoggingDotNet\ZhaoStephen.LoggingDotNetDemoApp\bin\Release\ZhaoStephen.LoggingDotNetDemoApp.pdb
+D:\projects\ZhaoStephen.LoggingDotNet\ZhaoStephen.LoggingDotNetDemoApp\bin\Release\ZhaoStephen.LoggingDotNet.dll
+D:\projects\ZhaoStephen.LoggingDotNet\ZhaoStephen.LoggingDotNetDemoApp\bin\Release\ZhaoStephen.LoggingDotNet.pdb
+D:\projects\ZhaoStephen.LoggingDotNet\ZhaoStephen.LoggingDotNetDemoApp\obj\Release\ZhaoStephen.LoggingDotNetDemoApp.csprojResolveAssemblyReference.cache
+D:\projects\ZhaoStephen.LoggingDotNet\ZhaoStephen.LoggingDotNetDemoApp\obj\Release\ZhaoStephen.LoggingDotNetDemoApp.LoggingDemoAppForm.resources
+D:\projects\ZhaoStephen.LoggingDotNet\ZhaoStephen.LoggingDotNetDemoApp\obj\Release\ZhaoStephen.LoggingDotNetDemoApp.Properties.Resources.resources
+D:\projects\ZhaoStephen.LoggingDotNet\ZhaoStephen.LoggingDotNetDemoApp\obj\Release\ZhaoStephen.LoggingDotNetDemoApp.csproj.GenerateResource.Cache
+D:\projects\ZhaoStephen.LoggingDotNet\ZhaoStephen.LoggingDotNetDemoApp\obj\Release\ZhaoStephen.LoggingDotNetDemoApp.exe
+D:\projects\ZhaoStephen.LoggingDotNet\ZhaoStephen.LoggingDotNetDemoApp\obj\Release\ZhaoStephen.LoggingDotNetDemoApp.pdb

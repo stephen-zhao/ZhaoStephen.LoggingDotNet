@@ -24,23 +24,25 @@ namespace ZhaoStephen.LoggingDotNet
         public LogOrnamentLvl OrnamentLvl { get; protected set; }
         public TextWriter TextWriter { get; protected set; }
         public bool IsUsingTextWriter { get { return (TextWriter != null); } }
-        protected Action<string> WriteAction { get; set; }
+        public Action<string> WriteAction { get; protected set; }
+        public List<Func<LogMsg, LogMsg>> ListMiddlewareFunc { get; protected set; }
 
         public LogOutputter(TextWriter writer, LogOrnamentLvl ornament, LogSeverityLvls severities)
         {
-            DictOrnamentFormats = DEFAULT_DICT_ORNAMENT_FORMATS;
-            DisplayedSeverities = severities;
-            OrnamentLvl = ornament;
+            Init(ornament, severities);
             TextWriter = writer;
             WriteAction = writer.Write;
         }
 
         public LogOutputter(Action<string> writeAction, LogOrnamentLvl ornament, LogSeverityLvls severities)
         {
-            DictOrnamentFormats = DEFAULT_DICT_ORNAMENT_FORMATS;
-            DisplayedSeverities = severities;
-            OrnamentLvl = ornament;
+            Init(ornament, severities);
             WriteAction = writeAction;
+        }
+
+        public void QueueMiddleware(Func<LogMsg, LogMsg> function)
+        {
+            ListMiddlewareFunc.Add(function);
         }
 
         public void Write(LogMsg msg)
@@ -49,14 +51,29 @@ namespace ZhaoStephen.LoggingDotNet
             {
                 return;
             }
-            string msgString = String.Format(DictOrnamentFormats[OrnamentLvl],
-                msg.Message,
-                msg.TimeStamp,
-                msg.Severity,
-                msg.CallerMemberName,
-                msg.CallerLineNumber,
-                msg.CallerFilePath) + Environment.NewLine;
-            Task.Run(() => WriteAction(msgString));
+            Task.Run(() =>
+            {
+                foreach (var middleware in ListMiddlewareFunc)
+                {
+                    msg = middleware(msg);
+                }
+                string msgString = String.Format(DictOrnamentFormats[OrnamentLvl],
+                   msg.Message,
+                   msg.TimeStamp,
+                   msg.Severity,
+                   msg.CallerMemberName,
+                   msg.CallerLineNumber,
+                   msg.CallerFilePath) + Environment.NewLine;
+                WriteAction(msgString);
+            });
+        }
+
+        private void Init(LogOrnamentLvl ornament, LogSeverityLvls severities)
+        {
+            DictOrnamentFormats = DEFAULT_DICT_ORNAMENT_FORMATS;
+            DisplayedSeverities = severities;
+            OrnamentLvl = ornament;
+            ListMiddlewareFunc = new List<Func<LogMsg, LogMsg>>();
         }
     }
 }

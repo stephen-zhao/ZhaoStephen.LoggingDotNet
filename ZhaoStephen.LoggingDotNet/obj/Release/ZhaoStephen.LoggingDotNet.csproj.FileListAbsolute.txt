@@ -1,0 +1,4 @@
+D:\projects\ZhaoStephen.LoggingDotNet\ZhaoStephen.LoggingDotNet\bin\Release\ZhaoStephen.LoggingDotNet.dll
+D:\projects\ZhaoStephen.LoggingDotNet\ZhaoStephen.LoggingDotNet\bin\Release\ZhaoStephen.LoggingDotNet.pdb
+D:\projects\ZhaoStephen.LoggingDotNet\ZhaoStephen.LoggingDotNet\obj\Release\ZhaoStephen.LoggingDotNet.dll
+D:\projects\ZhaoStephen.LoggingDotNet\ZhaoStephen.LoggingDotNet\obj\Release\ZhaoStephen.LoggingDotNet.pdb

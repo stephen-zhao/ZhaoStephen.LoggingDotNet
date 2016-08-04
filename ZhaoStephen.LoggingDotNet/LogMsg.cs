@@ -8,13 +8,13 @@ namespace ZhaoStephen.LoggingDotNet
 {
     public class LogMsg
     {
-        public string Message { get; protected set; } = "";
-        public LogSeverityLvls Severity { get; protected set; } = LogSeverityLvls.DEBUG;
-        public bool IsThreadTerminatingMsg { get; protected set; } = false;
-        public DateTime TimeStamp { get; protected set; } = DateTime.MinValue;
-        public int CallerLineNumber { get; protected set; } = 0;
-        public string CallerFilePath { get; protected set; } = "";
-        public string CallerMemberName { get; protected set; } = "";
+        public string Message { get; set; } = "";
+        public LogSeverityLvls Severity { get; set; } = LogSeverityLvls.DEBUG;
+        public bool IsThreadTerminatingMsg { get; set; } = false;
+        public DateTime TimeStamp { get; set; } = DateTime.MinValue;
+        public int CallerLineNumber { get; set; } = 0;
+        public string CallerFilePath { get; set; } = "";
+        public string CallerMemberName { get; set; } = "";
 
         public static LogMsg GetThreadTerminatingMsg()
         {
