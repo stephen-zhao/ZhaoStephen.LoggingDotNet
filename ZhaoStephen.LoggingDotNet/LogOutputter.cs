@@ -22,16 +22,20 @@ namespace ZhaoStephen.LoggingDotNet
         public Dictionary<LogOrnamentLvl, string> DictOrnamentFormats { get; protected set; }
         public LogSeverityLvls DisplayedSeverities { get; protected set; }
         public LogOrnamentLvl OrnamentLvl { get; protected set; }
-        public TextWriter TextWriter { get; protected set; }
-        public bool IsUsingTextWriter { get { return (TextWriter != null); } }
+        public TextWriter ThisTextWriter { get; protected set; }
+        public bool IsUsingATextWriter { get { return (ThisTextWriter != null); } }
         public Action<string> WriteAction { get; protected set; }
         public List<Func<LogMsg, LogMsg>> ListMiddlewareFunc { get; protected set; }
 
         public LogOutputter(TextWriter writer, LogOrnamentLvl ornament, LogSeverityLvls severities)
         {
             Init(ornament, severities);
-            TextWriter = writer;
-            WriteAction = writer.Write;
+            ThisTextWriter = writer;
+            WriteAction = (str) => 
+            {
+                ThisTextWriter.Write(str);
+                ThisTextWriter.Flush();
+            };
         }
 
         public LogOutputter(Action<string> writeAction, LogOrnamentLvl ornament, LogSeverityLvls severities)

@@ -224,7 +224,7 @@ namespace ZhaoStephen.LoggingDotNet
             // If appropriate, add the main log file to the list of outputs
             if (outputToMainLog && DoMainLogging)
             {
-                ListOutputs.Add(new LogOutputter(new StreamWriter(new FileStream(MainLogFile, FileMode.OpenOrCreate, FileAccess.Write)), MainLogOrnamentLvl, MainLogSeverityLvls));
+                ListOutputs.Add(new LogOutputter(new StreamWriter(new FileStream(MainLogFile, FileMode.Append, FileAccess.Write)), MainLogOrnamentLvl, MainLogSeverityLvls));
             }
 
             // Instantiate the message queue
@@ -236,6 +236,7 @@ namespace ZhaoStephen.LoggingDotNet
             // Add the instance to a list of instances
             _instances.Add(this);
         }
+
 
         #endregion
 
@@ -327,6 +328,7 @@ namespace ZhaoStephen.LoggingDotNet
         {
             EnqueueMsg(message, LogSeverityLvls.DEBUG, DateTime.Now, callerLineNum, callerFilePath, callerMemberName);
         }
+
 
         #endregion
 
@@ -446,6 +448,27 @@ namespace ZhaoStephen.LoggingDotNet
 
 
 
+        ///////////////////////////////////////////////////////////////////////////////////////////
+        ////                                                                                   ////
+        ////   Private Thread Methods                                                          ////
+        ////                                                                                   ////
+        ///////////////////////////////////////////////////////////////////////////////////////////
+        #region Finalizer
+        
+
+        ~Logger()
+        {
+            Dispose();
+        }
+        
+
+        #endregion
+            
+            
+            
+            
+            
+             
         ///////////////////////////////////////////////////////////////////////////////////////////
         ////                                                                                   ////
         ////   Private Thread Methods                                                          ////

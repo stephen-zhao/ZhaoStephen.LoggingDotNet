@@ -1,5 +1,0 @@
-[2016-08-03 23:34:17] [ERROR] [textBox1_KeyPress] [36] [D:\projects\ZhaoStephen.LoggingDotNet\ZhaoStephen.LoggingDotNetDemoApp\LoggingDemoAppForm.cs] Failed to run command 'set'. Enter 'help' for usage.
-[2016-08-03 23:34:18] [ERROR] [textBox1_KeyPress] [36] [D:\projects\ZhaoStephen.LoggingDotNet\ZhaoStephen.LoggingDotNetDemoApp\LoggingDemoAppForm.cs] Failed to run command 'what'. Enter 'help' for usage.
-[2016-08-03 23:34:23] [INFO] [TryRunCommand] [64] [D:\projects\ZhaoStephen.LoggingDotNet\ZhaoStephen.LoggingDotNetDemoApp\LoggingDemoAppForm.cs] For your information, using the abbreviated FYI sometimes sounds passive aggressive.
-[2016-08-03 23:34:25] [INFO] [TryRunCommand] [64] [D:\projects\ZhaoStephen.LoggingDotNet\ZhaoStephen.LoggingDotNetDemoApp\LoggingDemoAppForm.cs] For your information, using the abbreviated FYI sometimes sounds passive aggressive.
-[2016-08-03 23:34:27] [INFO] [TryRunCommand] [64] [D:\projects\ZhaoStephen.LoggingDotNet\ZhaoStephen.LoggingDotNetDemoApp\LoggingDemoAppForm.cs] For your
